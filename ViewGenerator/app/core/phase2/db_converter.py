@@ -89,6 +89,11 @@ class DBConverter:
                     + "\n")
         return foreign_keys
 
+
+    '''
+    Special case of many to many mapping
+    '''
+
     def __special_case_mtm_mapping(self, right_associations, name):
         foreign_keys = {"insert": [], "foreign_keys": [], "mapping": {"create_mapping": [], "foreign_keys": []},
                         "name": []}
